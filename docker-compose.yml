@@ -1,0 +1,16 @@
+version: '3'
+services:
+  myapp:
+    build: 
+      context: .
+      dockerfile: ./apps/myapp/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/myapp:/app
+      - ./tsconfig.base.json:/app/tsconfig.base.json
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    command: "nodemon --exec tsx src/main.ts"
+    # command: "nodemon --exec dist/apps/myapp/src/main.js"
