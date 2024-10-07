@@ -41,5 +41,21 @@
       },
       "exclude": ["apps/first-monorepo-e2e/**/*"]
     }
-  ]
+  ],
+  "release": {
+    "groups": {
+      "myfirst-group": {
+        "projects": [
+          "myapp", "first-monorepo"
+        ],
+       "projectsRelationship": "independent"
+      }
+    },
+    "projectsRelationship": "independent",
+    "changelog": {
+      "projectChangelogs": {
+        "createRelease": "github"
+      }
+    }
+  }
 }
