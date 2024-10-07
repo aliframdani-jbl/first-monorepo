@@ -1,6 +1,6 @@
 {
   "name": "myapp-alif-try",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "main": "src/main.ts",
   "devDependencies": {},
   "scripts": {
