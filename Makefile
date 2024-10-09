@@ -22,3 +22,6 @@ first-release:
     else \
         nx release --projects $(PROJECT_NAMES) --skip-publish --first-release --dry-run; \
     fi
+
+tunneling:
+	ts-node tools/tunneling/tunelling.ts
