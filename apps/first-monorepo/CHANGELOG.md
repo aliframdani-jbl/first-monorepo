@@ -1,3 +1,7 @@
+## v2.1.1 (2024-10-23)
+
+This was a version bump only for first-monorepo to align it with other projects, there were no code changes.
+
 ## v1.0.1 (2024-10-23)
 
 This was a version bump only for first-monorepo to align it with other projects, there were no code changes.

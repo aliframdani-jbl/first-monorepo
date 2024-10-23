@@ -1,3 +1,20 @@
+## v2.1.1 (2024-10-23)
+
+
+### 🚀 Features
+
+- update project generator
+
+
+### 🩹 Fixes
+
+- mencoba fix
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ## v1.0.1 (2024-10-23)
 
 
