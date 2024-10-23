@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../generators/dist/out-tsc",
+    "module": "commonjs",
+    "types": ["node"]
+  },
+  "exclude": ["../../../generators/generator/files/jest.config.ts", "../../../generators/generator/files/src/**/*.spec.ts", "../../../generators/generator/files/src/**/*.test.ts"],
+  "include": ["../../../generators/generator/files/src/**/*.ts"]
+}

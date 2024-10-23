@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { UserHandler } from '../handler/user_handler';
+import { UserHandler } from './user_handler';
 export const RegisterUserRoutes = (
   router: Router,
   userHandler: UserHandler

@@ -2,7 +2,7 @@
 PUBLISH=false
 
 generate:
-	nx generate @first-monorepo/my-plugin:my-generator
+	nx generate @first-monorepo/project-generator:new-project
 
 release:
 	if [ $(PUBLISH) == true ]; then \

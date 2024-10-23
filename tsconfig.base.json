@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@first-monorepo/my-plugin": ["tools/my-plugin/src/index.ts"]
+      "@first-monorepo/project-generator": [
+        "tools/project-generator/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
