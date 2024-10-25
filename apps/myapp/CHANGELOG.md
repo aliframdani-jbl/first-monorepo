@@ -1,3 +1,48 @@
+## 1.19.0 (2024-10-25)
+
+
+### 🚀 Features
+
+- **myapp:** fuh
+
+- **myapp:** nice try diddy
+
+- **myapp:** haha
+
+- **myapp:** asd
+
+- **myapp:** asds
+
+- **myapp:** cali
+
+- **myapp:** uno
+
+- **myapp:** typescript weirdos
+
+- **myapp:** juasd
+
+
+### 🏡 Chore
+
+- **release:** publish
+
+- **release:** publish
+
+- **release:** publish
+
+- **release:** publish
+
+- **release:** publish
+
+- **release:** publish
+
+- **release:** publish
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ## 1.7.0 (2024-10-25)
 
 
