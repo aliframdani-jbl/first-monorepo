@@ -10,8 +10,6 @@ import { UserUsecase } from './usecase/user_usecase';
 (async () => {
   try {
     console.log(__dirname);
-    console.log('try'); //for testing
-    console.log('alif hh');
     const res = config({ path: path.resolve(__dirname, '.env') });
     res.error ? console.log(res.error) : console.log(res.parsed);
 
