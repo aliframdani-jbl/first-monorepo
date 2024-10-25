@@ -45,12 +45,3 @@ import { UserUsecase } from './usecase/user_usecase';
     process.exit(1); // bertambah
   }
 })();
-
-// coba fix
-// coba chore
-// mencoba invalid
-// mencoba refactor
-// coba refactor lagi
-// coba feature
-// coba feature lagi
-// feature2
