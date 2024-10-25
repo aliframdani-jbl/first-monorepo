@@ -43,3 +43,5 @@ import { UserUsecase } from './usecase/user_usecase';
     process.exit(1); // bertambah
   }
 })();
+
+// 1
