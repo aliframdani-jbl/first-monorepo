@@ -9,9 +9,9 @@ import { UserUsecase } from './usecase/user_usecase';
 
 (async () => {
   try {
-    console.log(__dirname)
-    console.log("try")//for testing
-    console.log("alif hh")
+    console.log(__dirname);
+    console.log('try'); //for testing
+    console.log('alif hh');
     const res = config({ path: path.resolve(__dirname, '.env') });
     res.error ? console.log(res.error) : console.log(res.parsed);
 
@@ -25,8 +25,8 @@ import { UserUsecase } from './usecase/user_usecase';
     const err = await db.ping();
     if (err) {
       console.error('Database connection failed:', err);
-      process.exit(1); 
-    } 
+      process.exit(1);
+    }
     //
 
     const userRepository = new UserRepository(db);
@@ -40,7 +40,6 @@ import { UserUsecase } from './usecase/user_usecase';
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
-
   } catch (error) {
     console.error('Error starting the server:', error);
     process.exit(1); // bertambah
@@ -53,3 +52,4 @@ import { UserUsecase } from './usecase/user_usecase';
 // mencoba refactor
 // coba refactor lagi
 // coba feature
+// coba feature lagi
