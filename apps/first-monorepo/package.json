@@ -1,6 +1,6 @@
 {
   "name": "@aliframdani-jbl/first-monorepo",
-  "version": "2.0.0",
+  "version": "1.4.0",
   "main": "src/main.ts",
   "repository": {
     "type": "git",
