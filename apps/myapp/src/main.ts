@@ -25,7 +25,6 @@ import { UserUsecase } from './usecase/user_usecase';
       console.error('Database connection failed:', err);
       process.exit(1);
     }
-    //
 
     const userRepository = new UserRepository(db);
     const userUsecase = new UserUsecase(userRepository);
@@ -44,4 +43,4 @@ import { UserUsecase } from './usecase/user_usecase';
   }
 })();
 
-// 7
+// 9
