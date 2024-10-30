@@ -1,4 +1,4 @@
-## 0.0.2 (2024-10-30)
+## 0.1.0 (2024-10-30)
 
 
 ### 🚀 Features
@@ -6,6 +6,8 @@
 - update project generator
 
 - add coba commit
+
+- mencoba mencabu
 
 - **myapp:** mencoba mencibi
 
@@ -31,6 +33,8 @@
 
 - **myapp:** juasd
 
+- **myapp:** try again
+
 
 ### 🩹 Fixes
 
@@ -47,7 +51,3 @@
 ### ❤️  Thank You
 
 - aliframdani-jbl
-
-## 0.0.1 (2024-10-28)
-
-This was a version bump only for myapp to align it with other projects, there were no code changes.
