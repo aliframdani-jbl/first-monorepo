@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@first-monorepo/project-generator": [
+      "@aliframdani-jbl/project-generator": [
         "tools/project-generator/src/index.ts"
       ]
     }

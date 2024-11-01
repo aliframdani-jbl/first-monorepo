@@ -43,18 +43,63 @@
     }
   ],
   "release": {
+    "version": {
+      "conventionalCommits": true
+    },
     "groups": {
       "myfirst-group": {
-        "projects": [
-          "myapp", "first-monorepo"
-        ],
-       "projectsRelationship": "independent"
+        "projects": ["myapp", "first-monorepo"],
+        "projectsRelationship": "independent"
       }
     },
     "projectsRelationship": "independent",
     "changelog": {
-      "projectChangelogs": {
-        "createRelease": "github"
+      "projectChangelogs": true,
+      "automaticFromRef": true
+    },
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "type": "feat",
+          "section": "Features"
+        },
+        "fix": {
+          "type": "fix",
+          "section": "Bug Fixes"
+        },
+        "perf": {
+          "type": "perf",
+          "section": "Performance Improvements"
+        },
+        "revert": {
+          "type": "revert",
+          "section": "Reverts"
+        },
+        "docs": {
+          "type": "docs",
+          "section": "Documentation"
+        },
+        "style": {
+          "type": "style",
+          "section": "Styles",
+          "hidden": true
+        },
+        "refactor": {
+          "type": "refactor",
+          "section": "Code Refactoring"
+        },
+        "test": {
+          "type": "test",
+          "section": "Tests",
+          "hidden": true,
+          "changelog": false
+        },
+        "chore": {
+          "type": "chore",
+          "section": "Miscellaneous Chores",
+          "hidden": true,
+          "changelog": false
+        }
       }
     }
   }
