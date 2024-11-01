@@ -1,47 +1,65 @@
-## v9.1.1 (2024-10-07)
+<a name="unreleased"></a>
+## [Unreleased]
 
-This was a version bump only, there were no code changes.
+### Feat
+- add coba commit
 
-## 9.1.1 (2024-10-07)
 
-This was a version bump only, there were no code changes.
+<a name="myapp@v2.1.2"></a>
+## [myapp@v2.1.2] - 2024-10-23
 
-## 9.1.0 (2024-10-07)
+<a name="first-monorepo@v2.1.2"></a>
+## [first-monorepo@v2.1.2] - 2024-10-23
+### Refactor
+- mencoba merefactor
 
-This was a version bump only, there were no code changes.
 
-## 9.0.1 (2024-10-07)
+<a name="myapp@v2.1.1"></a>
+## [myapp@v2.1.1] - 2024-10-23
 
-This was a version bump only, there were no code changes.
+<a name="first-monorepo@v2.1.1"></a>
+## [first-monorepo@v2.1.1] - 2024-10-23
+### Chore
+- mencoba chore
 
-# 9.0.0 (2024-10-07)
+### Fix
+- mencoba fix
 
-This was a version bump only, there were no code changes.
+### Refactor
+- mencoba refactor
 
-# 8.0.0 (2024-10-04)
 
-This was a version bump only, there were no code changes.
+<a name="myapp@v1.0.1"></a>
+## [myapp@v1.0.1] - 2024-10-23
 
-# 7.0.0 (2024-10-04)
+<a name="first-monorepo@v1.0.1"></a>
+## [first-monorepo@v1.0.1] - 2024-10-23
+### Chore
+- comment
 
-This was a version bump only, there were no code changes.
+### Feat
+- update project generator
 
-# 6.0.0 (2024-10-04)
+### Feature
+- add tunneling tool
+- release management
 
-This was a version bump only, there were no code changes.
 
-# 5.0.0 (2024-10-03)
+<a name="first-monorepo@1.0.0"></a>
+## [first-monorepo@1.0.0] - 2024-10-07
 
-This was a version bump only, there were no code changes.
+<a name="myapp@1.0.0"></a>
+## myapp@1.0.0 - 2024-10-07
+### Feature
+- add configurable project.json and running in docker
+- add project generator
 
-# 4.0.0 (2024-10-03)
 
-This was a version bump only, there were no code changes.
-
-# 3.0.0 (2024-10-03)
-
-This was a version bump only, there were no code changes.
-
-# 2.0.0 (2024-10-03)
-
-This was a version bump only, there were no code changes.
+[Unreleased]: https://github.com/aliframdani-jbl/first-monorepo/compare/myapp@v2.1.2...HEAD
+[myapp@v2.1.2]: https://github.com/aliframdani-jbl/first-monorepo/compare/first-monorepo@v2.1.2...myapp@v2.1.2
+[first-monorepo@v2.1.2]: https://github.com/aliframdani-jbl/first-monorepo/compare/myapp@v2.1.1...first-monorepo@v2.1.2
+[myapp@v2.1.1]: https://github.com/aliframdani-jbl/first-monorepo/compare/first-monorepo@v2.1.1...myapp@v2.1.1
+[first-monorepo@v2.1.1]: https://github.com/aliframdani-jbl/first-monorepo/compare/myapp@v1.0.1...first-monorepo@v2.1.1
+[myapp@v1.0.1]: https://github.com/aliframdani-jbl/first-monorepo/compare/first-monorepo@v1.0.1...myapp@v1.0.1
+[first-monorepo@v1.0.1]: https://github.com/aliframdani-jbl/first-monorepo/compare/first-monorepo@1.0.0...first-monorepo@v1.0.1
+[first-monorepo@1.0.0]: https://github.com/aliframdani-jbl/first-monorepo/compare/myapp@1.0.0...first-monorepo@1.0.0
