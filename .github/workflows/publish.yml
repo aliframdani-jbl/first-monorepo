@@ -35,7 +35,7 @@ jobs:
         shell: bash
 
       - name: Bump version & changelog
-        run: make version
+        run: make release
         shell: bash
 
       - name: Publish packages
