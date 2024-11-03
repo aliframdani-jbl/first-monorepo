@@ -14,7 +14,14 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudAccessToken": "ZTJhYzgyNjEtMDU3MC00OWJmLWI3NDktYzI4ZDViNDg5Yzg3fHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test"]
+      }
+    }
+  },
   "targetDefaults": {
     "@nx/esbuild:esbuild": {
       "cache": true,
