@@ -1,3 +1,15 @@
+## 0.3.0 (2024-11-03)
+
+
+### 🚀 Features
+
+- **myapp:** trigger
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ## 0.2.0 (2024-11-03)
 
 
