@@ -1,3 +1,39 @@
+## 0.2.0 (2024-11-03)
+
+
+### 🚀 Features
+
+- **myapp:** add feature try
+
+- **myapp:** trigger again
+
+- **myapp:** try trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+- **myapp:** trigger
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ## 0.1.0 (2024-11-01)
 
 
