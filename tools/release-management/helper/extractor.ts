@@ -6,7 +6,7 @@ const MAJOR = 'major';
 const MINOR = 'minor';
 const PATCH = 'patch';
 
-export function getCommitTypeAndApp(commitMessage: string): {
+export function getCommitTypeAndApps(commitMessage: string): {
   type: string;
   app: string;
 } {

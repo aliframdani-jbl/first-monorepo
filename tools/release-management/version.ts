@@ -25,5 +25,7 @@ export async function bumpVersion(
     projects: [app],
     verbose: true,
     firstRelease: args.first_release,
+    gitCommit: true,
+    dryRun: args.dryRun,
   });
 }

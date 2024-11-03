@@ -4,6 +4,7 @@
 PUBLISH=false
 FRFLAG=$(if $(FIRST_RELEASE),--first-release)
 APPSFLAG=$(if $(APPS),--apps $(APPS))
+EXECFLAG=$(if $(EXEC),--exec)
 
 generate:
 	nx generate @aliframdani-jbl/project-generator:new-project
@@ -12,25 +13,5 @@ tunneling:
 	ts-node tools/tunneling/tunelling.ts
 
 release:
-	npx tsx tools/release-management/release.ts $(FRFLAG) $(APPSFLAG)
+	npx tsx tools/release-management/main.ts $(FRFLAG) $(APPSFLAG) $(EXECFLAG)
 
-
-
-# release:
-# 	if [ $(PUBLISH) == true ]; then \
-# 		nx release --skip-publish; \
-#     else \
-#         nx release --skip-publish --dry-run; \
-#     fi
-
-# first-release:
-# 	if [ $(PROJECT_NAMES) == ""]; then \
-# 		echo "PROJECT_NAMES must be set"; \
-# 		exit 1; \
-# 	fi \
-
-# 	if [ $(PUBLISH) == true ]; then \
-# 		nx release --projects $(PROJECT_NAMES) --skip-publish --first-release; \
-#     else \
-#         nx release --projects $(PROJECT_NAMES) --skip-publish --first-release --dry-run; \
-#     fi

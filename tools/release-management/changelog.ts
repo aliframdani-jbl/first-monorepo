@@ -1,5 +1,3 @@
-import * as git from './helper/git';
-import * as extractor from './helper/extractor';
 import { releaseChangelog } from 'nx/release';
 import { IReleaseArgs } from './interfaces/iRelease';
 
@@ -21,6 +19,8 @@ export async function runReleaseChangelog(
       verbose: true,
       firstRelease: args.first_release,
       gitTag: true,
+      gitCommit: true,
+      dryRun: args.dryRun,
     });
   } catch (error) {
     console.error(`Error running changelog for ${apps}:`, error);
