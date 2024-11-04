@@ -1,7 +1,7 @@
 import minimist from 'minimist';
 import * as git from './helper/git';
 import * as extractor from './helper/extractor';
-import { bumpVersion } from './version';
+import { runBumpVersion } from './version';
 import { runReleaseChangelog } from './changelog';
 import { IReleaseArgs } from './interfaces/iRelease';
 import { stringify } from 'querystring';
@@ -25,16 +25,17 @@ async function runRelease(args: IReleaseArgs) {
       throw new Error('No valid release trigger found.');
     }
 
-    let apps = res.app;
+    let appsStr = res.app;
     if (args.apps && args.apps != '') {
-      apps = args.apps;
+      appsStr = args.apps;
     }
+    const apps = appsStr.split(',');
 
-    await bumpVersion(res.type, apps, args);
+    const bumpVersion = await runBumpVersion(res.type, apps, args);
 
     // TODO: handle for multiple apps. How to manage the version
-    const version = extractor.getAppCurrentVersion(apps); // get new version resulted from nx release version
-    await runReleaseChangelog(version, apps, args);
+    // const version = extractor.getAppCurrentVersion(apps); // get new version resulted from nx release version
+    await runReleaseChangelog(bumpVersion.projectsVersionData, apps, args);
 
     await runReleasePublish(apps, args);
   } catch (error) {
@@ -53,8 +54,9 @@ function processArgs(): IReleaseArgs {
   };
 
   if (argv['exec']) {
-    console.log('Release running not on dry-run...');
     args.dryRun = false;
+  } else {
+    console.log('[DEFAULT] Automatically running release on dry-run...');
   }
 
   return args;

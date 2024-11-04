@@ -3,3 +3,8 @@ export interface IReleaseArgs {
   apps: string; // comma separated list of apps
   dryRun: boolean;
 }
+
+export interface IBumpVersion {
+  workspaceVersion: string | null | undefined;
+  projectsVersionData: any;
+}
