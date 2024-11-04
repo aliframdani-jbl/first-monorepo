@@ -34,15 +34,15 @@ jobs:
         run: npx nx report
         shell: bash
 
-      - name: Show GitHub context
+      - name: Show GitHub Actor
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ github.actor }}
         run: echo "$GITHUB_CONTEXT"
         shell: bash
 
       - name: Set Git user
         run: |
-          git config --global user.name "${{ github.actor }}"
+          git config user.name "${{ github.actor }}"
 
       - name: Bump version & Publish packages
         run: make release EXEC=true
