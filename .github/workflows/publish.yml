@@ -48,5 +48,5 @@ jobs:
           NPM_CONFIG_ACCESS: public
 
       - name: Push bump & tag
-        run: git push origin main && git push origin <tagName>
+        run: git push origin main && git push origin --tags
         shell: bash
