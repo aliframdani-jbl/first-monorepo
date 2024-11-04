@@ -34,21 +34,12 @@ jobs:
         run: npx nx report
         shell: bash
 
-      - name: Show GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-        shell: bash
-
-      - name: Set Git user
-        run: |
-          git config --global user.name "${{ github.actor }}"
-
       - name: Bump version & Publish packages
         run: make release EXEC=true
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
           NPM_CONFIG_PROVENANCE: true
           NPM_CONFIG_ACCESS: public
