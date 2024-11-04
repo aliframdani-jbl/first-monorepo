@@ -40,5 +40,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
           NPM_CONFIG_PROVENANCE: true
           NPM_CONFIG_ACCESS: public
