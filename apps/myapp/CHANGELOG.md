@@ -1,3 +1,15 @@
+## 0.6.0 (2024-11-04)
+
+
+### 🚀 Features
+
+- **myapp,first-monorepo:** coba double
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ## 0.5.0 (2024-11-04)
 
 
