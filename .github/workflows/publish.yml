@@ -46,3 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
           NPM_CONFIG_ACCESS: public
+
+      - name: Push bump & tag
+        run: git push origin main && git push origin <tagName>
+        shell: bash
