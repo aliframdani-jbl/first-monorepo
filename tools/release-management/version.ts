@@ -29,9 +29,6 @@ export async function runBumpVersion(
     dryRun: args.dryRun,
   });
 
-  console.log('ANU');
-  console.log(projectsVersionData);
-
   return {
     workspaceVersion: workspaceVersion,
     projectsVersionData: projectsVersionData,

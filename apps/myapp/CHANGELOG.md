@@ -1,6 +1,3 @@
-## 0.7.0 (2024-11-04)
-
-
 ### 🚀 Features
 
 - imrpove release management
@@ -45,25 +42,21 @@
 
 - **myapp:** trigger real
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.6.0 (2024-11-04)
 
-
 ### 🚀 Features
 
 - **myapp,first-monorepo:** coba double
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.5.0 (2024-11-04)
-
 
 ### 🚀 Features
 
@@ -71,37 +64,31 @@
 
 - **myapp,first-monorepo:** coba double
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.4.0 (2024-11-03)
 
-
 ### 🚀 Features
 
 - **myapp:** trigger
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.3.0 (2024-11-03)
 
-
 ### 🚀 Features
 
 - **myapp:** trigger
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.2.0 (2024-11-03)
-
 
 ### 🚀 Features
 
@@ -131,13 +118,11 @@
 
 - **myapp:** trigger
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
 
 ## 0.1.0 (2024-11-01)
-
 
 ### 🚀 Features
 
@@ -173,11 +158,9 @@
 
 - **myapp:** try again
 
-
 ### 🩹 Fixes
 
 - mencoba fix
-
 
 ### 💅 Refactors
 
@@ -185,7 +168,6 @@
 
 - mencoba merefactor
 
-
-### ❤️  Thank You
+### ❤️ Thank You
 
 - aliframdani-jbl
