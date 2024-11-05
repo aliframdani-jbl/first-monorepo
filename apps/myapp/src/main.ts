@@ -6,6 +6,8 @@ import { RegisterUserRoutes } from './handler/routes';
 import { UserHandler } from './handler/user_handler';
 import { UserRepository } from './repository/user_repository';
 import { UserUsecase } from './usecase/user_usecase';
+import { elasticTracer } from '@jubelio/distributed-tracing';
+elasticTracer.init('service-name');
 
 (async () => {
   try {
@@ -43,4 +45,4 @@ import { UserUsecase } from './usecase/user_usecase';
   }
 })();
 
-// 41
+// 42
