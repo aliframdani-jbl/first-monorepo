@@ -14,12 +14,19 @@ jobs:
       packages: write # Allow publishing to GitHub Packages
       id-token: write # Needed for provenance data generation
     timeout-minutes: 10
-    if: ${{ github.event.head_commit.message && github.event.head_commit.message =~ /^[a-z]+\([a-zA-Z0-9_-]+\): .+/ }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Check commit message format
+        id: check_message
+        run: |
+          if [[ ! "${{ github.event.head_commit.message }}" =~ ^[a-z]+\([a-zA-Z0-9_-]+\):\ .+ ]]; then
+            echo "Commit message format is invalid."
+            exit 1
+          fi
 
       - name: Install Node
         uses: actions/setup-node@v4
