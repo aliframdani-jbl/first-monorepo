@@ -1,3 +1,4 @@
+import { releaseChangelog } from 'nx/release';
 export interface IReleaseArgs {
   first_release?: boolean;
   apps: string; // comma separated list of apps
@@ -7,4 +8,9 @@ export interface IReleaseArgs {
 export interface IBumpVersion {
   workspaceVersion: string | null | undefined;
   projectsVersionData: any;
+}
+
+export interface IReleaseChangelog {
+  releaseVersion: any;
+  contents: string;
 }

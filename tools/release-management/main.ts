@@ -4,8 +4,6 @@ import * as extractor from './helper/extractor';
 import { runBumpVersion } from './version';
 import { runReleaseChangelog } from './changelog';
 import { IReleaseArgs } from './interfaces/iRelease';
-import { stringify } from 'querystring';
-import { argv } from 'process';
 import { runReleasePublish } from './publish';
 
 // Function to parse the commit message and determine the version bump
@@ -33,11 +31,13 @@ async function runRelease(args: IReleaseArgs) {
 
     const bumpVersion = await runBumpVersion(res.type, apps, args);
 
-    // TODO: handle for multiple apps. How to manage the version
-    // const version = extractor.getAppCurrentVersion(apps); // get new version resulted from nx release version
-    await runReleaseChangelog(bumpVersion.projectsVersionData, apps, args);
+    const changelog = await runReleaseChangelog(
+      bumpVersion.projectsVersionData,
+      apps,
+      args
+    );
 
-    await runReleasePublish(apps, args);
+    await runReleasePublish(apps, changelog, args);
   } catch (error) {
     console.error(error);
   }

@@ -102,3 +102,8 @@ export function getBumpSpecifier(commitType: string): string {
   }
   return '';
 }
+
+export function extractVersion(tag: string): string | null {
+  const match = tag.match(/@(\d+\.\d+\.\d+)$/);
+  return match ? match[1] : null;
+}
