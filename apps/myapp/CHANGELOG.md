@@ -1,3 +1,65 @@
+## 0.7.0 (2024-11-05)
+
+
+### 🚀 Features
+
+- imrpove release management
+
+- add github workflow github user
+
+- update workflow
+
+- workflow
+
+- workflow
+
+- workflow
+
+- worklfow
+
+- workflow
+
+- workflow
+
+- workflow
+
+- improve release managament
+
+- improve workflow
+
+- **myapp:** trigger
+
+- **myapp:** trugger
+
+- **myapp:** coba
+
+- **myapp:** trigger000
+
+- **myapp:** haha
+
+- **myapp:** yana
+
+- **myapp:** trigger322
+
+- **myapp:** trigger344
+
+- **myapp:** triggeres
+
+- **myapp:** trigger 001
+
+- **myapp:** trigger real
+
+- **myapp:** trigger
+
+- **myapp:** trigger ya guis ya
+
+- **myapp:** fguis
+
+
+### ❤️  Thank You
+
+- aliframdani-jbl
+
 ### 🚀 Features
 
 - imrpove release management
