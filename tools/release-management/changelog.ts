@@ -41,7 +41,6 @@ export async function runReleaseChangelog(
       res[app] = projectChangelogs[app];
     }
 
-    console.log(`PENGELUARAN: `, res);
     return res;
   } catch (error) {
     console.error(`Error running changelog for ${apps}:`, error);
