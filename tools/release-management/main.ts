@@ -53,7 +53,6 @@ async function runRelease(args: IReleaseArgs) {
 
 function processArgs(): IReleaseArgs {
   const argv = minimist(process.argv.slice(2));
-  console.log(argv);
 
   const args: IReleaseArgs = {
     first_release: argv['first-release'],

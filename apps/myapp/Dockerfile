@@ -9,16 +9,14 @@ COPY ../../package*.json ./
 
 COPY ../../tsconfig.base.json ./
 
-RUN npm install
+RUN  npm install
 
 RUN npm install -g nodemon
-RUN npm i -g tsx
-
-COPY . .
-
 RUN npm install -g typescript
 
-# COPY dist/apps/myapp dist/
+COPY ../../dist/apps/myapp /app/dist/
+
+RUN chmod +x /app/dist/src/main.js
 
 EXPOSE 3000
 

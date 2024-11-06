@@ -16,3 +16,5 @@ export const majorPattern = /^feat!\(?([^)]*)\)?:\s*.*/,
   docsPattern = /^docs\(?([^)]*)\)?:\s*.*/,
   stylePattern = /^style\(?([^)]*)\)?:\s*.*/,
   testPattern = /^test\(?([^)]*)\)?:\s*.*/;
+
+export const ROOT_SCOPE_COMMIT = 'root';

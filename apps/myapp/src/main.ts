@@ -6,16 +6,16 @@ import { RegisterUserRoutes } from './handler/routes';
 import { UserHandler } from './handler/user_handler';
 import { UserRepository } from './repository/user_repository';
 import { UserUsecase } from './usecase/user_usecase';
-import { elasticTracer } from '@jubelio/distributed-tracing';
-elasticTracer.init('service-name');
 
 (async () => {
   try {
-    console.log(__dirname);
-    const res = config({ path: path.resolve(__dirname, '.env') });
+    let envPath = path.resolve(__dirname, '.env');
+    if (process.env.DOCKER_ENV) {
+      envPath = path.resolve(__dirname, '../../.env');
+    }
+    console.log('envPath: ', envPath);
+    const res = config({ path: envPath });
     res.error ? console.log(res.error) : console.log(res.parsed);
-
-    console.log(process.env.DB_HOST);
 
     const app = express();
     app.use(express.json());

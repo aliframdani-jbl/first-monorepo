@@ -9,9 +9,10 @@
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
+      "cache": true,
       "options": {
         "platform": "node",
-        "outputPath": "apps/myapp/dist",
+        "outputPath": "dist/",
         "format": ["cjs"],
         "bundle": false,
         "main": "apps/myapp/src/main.ts",
