@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the commit message
+commit_message=$(cat "$1")
+
+# Define the required regex pattern
+pattern="^[a-z]+\([a-zA-Z0-9_-]+\): .+"
+
+# Check if the commit message matches the pattern
+if [[ ! $commit_message =~ $pattern ]]; then
+  echo -e "Error: Commit message does not match the required format. Please use the format: <specifier>(<app>): <subject>. Example: feat(myapp): add new feature"
+  exit 1  # Exit with an error to prevent the commit
+fi

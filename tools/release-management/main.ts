@@ -5,6 +5,7 @@ import { runBumpVersion } from './version';
 import { runReleaseChangelog } from './changelog';
 import { IReleaseArgs } from './interfaces/iRelease';
 import { runReleasePublish } from './publish';
+import { ROOT_SCOPE_COMMIT } from './constants/constants';
 
 // Function to parse the commit message and determine the version bump
 async function runRelease(args: IReleaseArgs) {
@@ -28,6 +29,13 @@ async function runRelease(args: IReleaseArgs) {
       appsStr = args.apps;
     }
     const apps = appsStr.split(',');
+
+    if (apps.length == 1 && apps[0] == ROOT_SCOPE_COMMIT) {
+      console.log(
+        'Root commit scope, not applying version bump and publish package.'
+      );
+      return;
+    }
 
     const bumpVersion = await runBumpVersion(res.type, apps, args);
 
