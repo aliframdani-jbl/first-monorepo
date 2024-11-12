@@ -1,0 +1,20 @@
+{
+  "name": "Node.js & TypeScript Monorepo Dev Container",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "myapp",
+  "workspaceFolder": "/workspace",
+  "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"],
+  "forwardPorts": [4000],
+  "customizations": {
+    "vscode": {
+      "terminal.integrated.defaultProfile.linux": "bash",
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "nrwl.angular-console", // nx console
+        "esbenp.prettier-vscode", // prettier
+        "ms-vscode.makefile-tools" // makefile tools
+      ]
+    }
+  }
+}

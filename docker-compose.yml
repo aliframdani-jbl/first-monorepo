@@ -3,15 +3,27 @@ services:
   myapp:
     build:
       context: .
-      dockerfile: ./apps/myapp/Dockerfile
+      dockerfile: ./apps/myapp/Dockerfile.dev
     ports:
       - '3000:3000'
     volumes:
-      - ./apps/myapp:/app
-      - ./dist/apps/myapp:/app/dist
-      - ./apps/myapp/src/.env:/app/.env
-      - ./tsconfig.base.json:/app/tsconfig.base.json
-      - /app/node_modules
+      - .:/workspace
+    # working_dir: /workspace/apps/myapp
+    environment:
+      NODE_ENV: development
+      DOCKER_ENV: true
+    # command: 'nodemon dist/src/main.js'
+    command: tail -f /dev/null
+
+  first-monorepo:
+    build:
+      context: .
+      dockerfile: ./apps/first-monorepo/Dockerfile.dev
+    ports:
+      - '3001:3001'
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/apps/first-monorepo
     environment:
       NODE_ENV: development
       DOCKER_ENV: true

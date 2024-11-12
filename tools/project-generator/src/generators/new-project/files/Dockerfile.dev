@@ -1,0 +1,19 @@
+FROM node:20.17.0
+
+ENV HOST=0.0.0.0
+ENV PORT=3000
+
+WORKDIR /workspace
+
+COPY ../../. ./
+
+RUN  npm install
+
+RUN npm install -g nodemon
+RUN npm install -g typescript
+
+WORKDIR /workspace/apps/myapp
+
+EXPOSE 3000
+
+# CMD ["nodemon", "/workspace/dist/apps/myapp/src/main.js"]

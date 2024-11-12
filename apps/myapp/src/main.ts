@@ -6,13 +6,17 @@ import { RegisterUserRoutes } from './handler/routes';
 import { UserHandler } from './handler/user_handler';
 import { UserRepository } from './repository/user_repository';
 import { UserUsecase } from './usecase/user_usecase';
+import { workspaceRoot } from '@nx/devkit';
 
 (async () => {
   try {
-    let envPath = path.resolve(__dirname, '.env');
-    if (process.env.DOCKER_ENV) {
-      envPath = path.resolve(__dirname, '../../.env');
-    }
+    // const envPath = path.resolve(__dirname, '.env');
+    // if (process.env.DOCKER_ENV) {
+    // envPath = path.resolve(__dirname, '../../.env');
+    // }
+
+    console.log('workspace path: ', workspaceRoot);
+    const envPath = path.resolve(workspaceRoot, './apps/myapp/src/.env');
     console.log('envPath: ', envPath);
     const res = config({ path: envPath });
     res.error ? console.log(res.error) : console.log(res.parsed);
@@ -35,6 +39,9 @@ import { UserUsecase } from './usecase/user_usecase';
     // Register routes
     RegisterUserRoutes(app, userHandler);
 
+    console.log('el hitam werrr');
+    // ss
+
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
@@ -45,4 +52,4 @@ import { UserUsecase } from './usecase/user_usecase';
   }
 })();
 
-// 42
+// 44

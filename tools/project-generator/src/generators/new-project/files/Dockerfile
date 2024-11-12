@@ -20,6 +20,6 @@ RUN npm install -g typescript
 
 # COPY dist/apps/myapp dist/
 
-EXPOSE 3000
+EXPOSE 3002
 
 CMD ["nodemon", "--exec", "tsx", "src/main.ts"]

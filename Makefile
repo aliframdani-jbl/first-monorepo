@@ -9,6 +9,12 @@ EXECFLAG=$(if $(EXEC),--exec)
 init:
 	./setup-git-hooks.sh
 
+run-devcontainer:
+	make init && npx devcontainer build --workspace-folder . && npx devcontainer up --workspace-folder .
+
+run-%:
+	nodemon /workspace/dist/apps/$*/src/main.js
+
 generate:
 	nx generate @aliframdani-jbl/project-generator:new-project
 
@@ -17,4 +23,6 @@ tunneling:
 
 release:
 	npx tsx tools/release-management/main.ts $(FRFLAG) $(APPSFLAG) $(EXECFLAG)
+
+
 

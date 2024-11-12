@@ -24,6 +24,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@devcontainers/cli": "^0.72.0",
     "@nx/esbuild": "19.5.7",
     "@nx/eslint": "19.5.7",
     "@nx/eslint-plugin": "19.5.7",
@@ -48,7 +49,7 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-environment-node": "^29.4.1",
     "nodemon": "^3.1.7",
-    "nx": "19.5.7",
+    "nx": "^19.5.7",
     "pino-pretty": "^11.2.2",
     "prettier": "^2.6.2",
     "semantic-release": "^24.1.3",
