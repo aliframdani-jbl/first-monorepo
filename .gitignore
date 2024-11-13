@@ -42,4 +42,5 @@ Thumbs.db
 .nx/workspace-data
 
 # env
+.env
 apps/*/src/.env
