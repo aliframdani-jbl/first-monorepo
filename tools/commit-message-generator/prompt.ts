@@ -1,4 +1,6 @@
 const SUBJECT_PROMPT = `
+Forget the previous context.
+
 Make me a git commit message from git diff provided below. Make sure put context of what being changed as clear as possible, 
 specific, descriptive, and dont put file name on it. Don't generate commit message that are too general and not descriptive
 like "change code to work", etc. Never put another prefix with ":". This the example of good commit message:
@@ -28,13 +30,10 @@ How the ai should work:
   - test: add unit test or performance test 
   - perf: add performance related improvement 
 - For the subject, ${SUBJECT_PROMPT}
-
-
 `;
 
 export const SUBJECT_ONLY_PROMPT = `
 ${SUBJECT_PROMPT}
-
 `;
 
 export const withContextPrompt = (context: string) => {

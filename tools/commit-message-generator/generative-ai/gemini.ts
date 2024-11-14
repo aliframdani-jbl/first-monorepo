@@ -11,19 +11,17 @@ import {
 const res = config({ path: path.resolve(__dirname, '../../../.env') });
 res.error ? console.log(res.error) : '';
 
-export const generateCommitMsg = async (gitDiff: string): Promise<string> => {
-  try {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY is not set');
-    }
+const apiKey = process.env.GEMINI_API_KEY;
+if (!apiKey) {
+  throw new Error('GEMINI_API_KEY is not set');
+}
 
-    const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = new GoogleGenerativeAI(apiKey);
+
+const generate = async (gitDiff: string, prompt: string): Promise<string> => {
+  try {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    // let gitDiff = await fs.readFile('diff.txt', 'utf-8');
-    const prompt = FULL_COMMIT_MSG_PROMPT + gitDiff;
     const result = await model.generateContent(prompt);
-    // console.log(result.response.text());
     return result.response.text();
   } catch (error) {
     console.error('Error reading the prompt or generating content:', error);
@@ -31,45 +29,41 @@ export const generateCommitMsg = async (gitDiff: string): Promise<string> => {
   }
 };
 
-export const generateCommitMsgWithContext = async (
+const generateCommitMessage = async (gitDiff: string): Promise<string> => {
+  try {
+    const prompt = FULL_COMMIT_MSG_PROMPT + gitDiff;
+    return generate(gitDiff, prompt);
+  } catch (error) {
+    console.error('Error reading the prompt or generating content:', error);
+    return '';
+  }
+};
+
+const generateCommitMessageWithContext = async (
   gitDiff: string,
   ctx: string
 ): Promise<string> => {
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY is not set');
-    }
-
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    // let gitDiff = await fs.readFile('diff.txt', 'utf-8');
     const prompt = FULL_COMMIT_MSG_PROMPT + withContextPrompt(ctx) + gitDiff;
-    const result = await model.generateContent(prompt);
-    // console.log(result.response.text());
-    return result.response.text();
+    return generate(gitDiff, prompt);
   } catch (error) {
     console.error('Error reading the prompt or generating content:', error);
     return '';
   }
 };
 
-export const generateSubject = async (gitDiff: string): Promise<string> => {
+const generateSubject = async (gitDiff: string): Promise<string> => {
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      throw new Error('GEMINI_API_KEY is not set');
-    }
-
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    // let gitDiff = await fs.readFile('diff.txt', 'utf-8');
     const prompt = SUBJECT_ONLY_PROMPT + gitDiff;
-    const result = await model.generateContent(prompt);
-    // console.log(result.response.text());
-    return result.response.text();
+    return generate(gitDiff, prompt);
   } catch (error) {
     console.error('Error reading the prompt or generating content:', error);
     return '';
   }
+};
+
+export default {
+  generateCommitMessage,
+  generateSubject,
+  generateCommitMessageWithContext,
 };

@@ -1,10 +1,8 @@
 import { execSync } from 'child_process';
 import inquirer from 'inquirer';
-import {
-  generateCommitMsg,
-  generateSubject,
-  generateCommitMsgWithContext,
-} from './generative-ai/gemini';
+import { GenerativeAI } from './generative-ai';
+
+const genAI = new GenerativeAI('gemini');
 
 // Function to get the git diff
 const getGitDiff = (): string => {
@@ -73,7 +71,7 @@ const getCommitType = async (): Promise<string> => {
 // Function to generate commit message subject using OpenAI
 const genSubject = async (gitDiff: string): Promise<string> => {
   try {
-    return generateSubject(gitDiff);
+    return genAI.generateSubject(gitDiff);
   } catch (error) {
     console.error('Failed to generate commit subject:', error);
     return 'Update code';
@@ -82,7 +80,7 @@ const genSubject = async (gitDiff: string): Promise<string> => {
 
 const genCommitMsg = async (gitDiff: string): Promise<string> => {
   try {
-    return generateCommitMsg(gitDiff);
+    return genAI.generateCommitMessage(gitDiff);
   } catch (error) {
     console.error('Failed to generate commit subject:', error);
     return 'Update code';
@@ -108,12 +106,15 @@ const confirmCommitMessage = async (
           { name: 'Regenerate', value: 'regenerate' },
           { name: 'Regenerate With Context', value: 'regenerate_with_context' },
           // { name: 'Customize', value: 'customize' },
+          { name: 'Cancel', value: 'cancel' },
         ],
       },
     ]);
 
     if (action === 'accept') {
       confirmed = true;
+    } else if (action === 'cancel') {
+      process.exit(0);
     } else if (action === 'regenerate') {
       if (isCustom) {
         finalMessage = await runCustomCommitMsgGenerator(getGitDiff());
@@ -140,7 +141,10 @@ const confirmCommitMessage = async (
           message: 'Enter context for the commit message:',
         },
       ]);
-      finalMessage = await generateCommitMsgWithContext(getGitDiff(), context);
+      finalMessage = await genAI.generateCommitMessageWithContext(
+        getGitDiff(),
+        context
+      );
       console.log('Regenerated Message:\n\n', finalMessage);
     }
   }
