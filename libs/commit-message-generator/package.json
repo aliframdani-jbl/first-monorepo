@@ -1,0 +1,15 @@
+{
+  "name": "@aliframdani-jbl/commit-message-generator",
+  "version": "0.0.1",
+  "dependencies": {
+    "@swc/helpers": "~0.5.11",
+    "dotenv": "^16.4.5",
+    "@huggingface/inference": "^2.8.1",
+    "openai": "^4.71.1"
+  },
+  "type": "commonjs",
+  "main": "./dist/libs/commit-message-generator/src/index.js",
+  "bin": {
+    "mager-commit": "./dist/libs/commit-message-generator/src/index.js"
+  }
+}

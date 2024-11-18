@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@aliframdani-jbl/commit-message-generator": [
+        "libs/commit-message-generator/src/index.ts"
+      ],
       "@aliframdani-jbl/project-generator": [
         "tools/project-generator/src/index.ts"
       ]
