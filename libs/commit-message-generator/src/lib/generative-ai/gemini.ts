@@ -1,5 +1,4 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import path from 'path';
 import { config } from 'dotenv';
 import {
   FULL_COMMIT_MSG_PROMPT,
@@ -10,7 +9,7 @@ import {
 // const res = config({ path: path.resolve(__dirname, '../.env') });
 // res.error ? console.log(res.error) : '';
 
-config({ path: path.resolve(__dirname, '../../.env') });
+config()
 
 const apiKey = process.env['GEMINI_API_KEY'];
 if (!apiKey) {
