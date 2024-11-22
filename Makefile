@@ -25,9 +25,9 @@ release:
 	npx tsx tools/release-management/main.ts $(FRFLAG) $(APPSFLAG) $(EXECFLAG)
 
 commit:
-	npx tsx tools/commit-message-generator/main.ts 
+	npx tsx tools/mager-commit/main.ts 
 
 commit-custom:
-	npx tsx tools/commit-message-generator/main.ts --custom
+	npx tsx tools/mager-commit/main.ts --custom
 
 

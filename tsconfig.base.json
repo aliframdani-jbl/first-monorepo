@@ -15,11 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@aliframdani-jbl/commit-message-generator": [
-        "libs/commit-message-generator/src/index.ts"
-      ],
+      "@aliframdani-jbl/mager-commit": ["libs/mager-commit/src/index.ts"],
       "@aliframdani-jbl/project-generator": [
         "tools/project-generator/src/index.ts"
+      ],
+      "@aliframdani-jbl/release-management": [
+        "libs/release-management/src/index.ts"
       ]
     }
   },

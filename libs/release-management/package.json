@@ -1,0 +1,17 @@
+{
+  "name": "@aliframdani-jbl/release-management",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "nx": "^19.5.7",
+    "simple-git": "^3.27.0",
+    "commander": "^12.1.0",
+    "figlet": "^1.8.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "bin": {
+    "releasx": "./src/bin/cli.js"
+  }
+}

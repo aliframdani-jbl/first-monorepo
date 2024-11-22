@@ -1,0 +1,19 @@
+{
+  "name": "commit-msg-generator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/commit-msg-generator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/commit-msg-generator",
+        "main": "libs/commit-msg-generator/src/index.ts",
+        "tsConfig": "libs/commit-msg-generator/tsconfig.lib.json",
+        "assets": ["libs/commit-msg-generator/*.md"]
+      }
+    }
+  }
+}

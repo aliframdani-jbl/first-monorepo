@@ -1,0 +1,19 @@
+{
+  "name": "release-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/release-management/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/release-management",
+        "main": "libs/release-management/src/index.ts",
+        "tsConfig": "libs/release-management/tsconfig.lib.json",
+        "assets": ["libs/release-management/*.md"]
+      }
+    }
+  }
+}
